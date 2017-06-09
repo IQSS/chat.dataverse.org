@@ -1,0 +1,14 @@
+#!/bin/sh
+source /usr/bin/virtualenvwrapper.sh
+# mkvirtualenv chat.dataverse.org # one-time
+workon chat.dataverse.org
+# see http://supervisord.org
+#pip install supervisor==3.1.3 # one-time, "Successfully installed supervisor meld3"
+#echo_supervisord_conf > supervisord.conf # one-time
+CONF=/home/shout/supervisord.conf
+supervisord -c $CONF
+supervisorctl -c $CONF status
+supervisorctl -c $CONF maintail
+#supervisorctl help
+#supervisorctl stop all
+#supervisorctl shutdown

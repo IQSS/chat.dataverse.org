@@ -1,0 +1,13 @@
+#!/bin/bash -x
+PGUSER=$USER
+DATABASE=irclog
+psql -c "CREATE DATABASE $DATABASE WITH OWNER = $PGUSER;" template1
+cat irclog.tsv | cut -f1,2,3,4,5,7,8 > /tmp/irclog.tsv
+psql -v ON_ERROR_STOP=1 $DATABASE -f irclog.sql
+if [ $? -eq 0 ]; then
+    echo OK
+else
+    echo FAIL
+    exit 1
+fi
+psql $DATABASE -c 'select id,channel,day,nick,timestamp,spam,in_summary from irclog order by id limit 10;'
