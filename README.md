@@ -1,7 +1,7 @@
 # chat.dataverse.org 
 
-http://chat.dataverse.org is a public place for current and potential Dataverse users and developers to chat and is logged at http://irclog.iq.harvard.edu/dataverse/toda
-y
+http://chat.dataverse.org is a public place for current and potential Dataverse users and developers to chat and is logged at http://irclog.iq.harvard.edu/dataverse/today
+
 
 This chat room is an IRC channel called "#dataverse" on the freenode IRC network, which means that any IRC client can be used to connect. http://chat.dataverse.org is simply a web interface that makes connecting to IRC easiser.
 
