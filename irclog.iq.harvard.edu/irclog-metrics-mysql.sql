@@ -18,4 +18,8 @@ SELECT COUNT(line) FROM irclog WHERE line NOT LIKE '%joined #dataverse' and time
 
 SELECT COUNT(line) FROM irclog WHERE line NOT LIKE '%joined #dataverse' and timestamp > 1497326400;
 
+# 358 feels quite high:
 SELECT (SELECT COUNT(distinct nick) as userCount FROM irclog WHERE timestamp > 1497326400) + (SELECT COUNT(nick) as userCount FROM irclog WHERE nick LIKE "dataverse-user%" and timestamp > 1497326400) as userCount;
+# 76 is more realistic. After this query, duplicates were removed by hand to come up with 76:
+SELECT distinct nick FROM irclog WHERE timestamp > 1497326400 order by LOWER(nick);
+
