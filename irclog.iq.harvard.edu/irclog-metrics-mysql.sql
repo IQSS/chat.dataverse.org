@@ -14,3 +14,8 @@ SELECT (SELECT COUNT(distinct nick) as userCount FROM irclog WHERE timestamp > 1
 
 SELECT COUNT(line) FROM irclog WHERE line NOT LIKE '%joined #dataverse' and timestamp > 1468503692;
 
+# metrics for Dataverse Community Meeting 2018
+
+SELECT COUNT(line) FROM irclog WHERE line NOT LIKE '%joined #dataverse' and timestamp > 1497326400;
+
+SELECT (SELECT COUNT(distinct nick) as userCount FROM irclog WHERE timestamp > 1497326400) + (SELECT COUNT(nick) as userCount FROM irclog WHERE nick LIKE "dataverse-user%" and timestamp > 1497326400) as userCount;
