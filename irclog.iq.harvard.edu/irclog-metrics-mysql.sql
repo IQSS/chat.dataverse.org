@@ -33,3 +33,12 @@ SELECT (SELECT COUNT(distinct nick) as userCount FROM irclog WHERE timestamp > 1
 # 98 is more realistic. After this query, duplicates were removed by hand to come up with 98:
 SELECT distinct nick FROM irclog WHERE timestamp > 1560657600 order by LOWER(nick);
 
+# metrics for Dataverse Community Meeting 2021
+
+# 10171
+SELECT COUNT(line) FROM irclog WHERE line NOT LIKE '%joined #dataverse' and timestamp > 1592280000;
+
+# 384 feels quite high:
+SELECT (SELECT COUNT(distinct nick) as userCount FROM irclog WHERE timestamp > 1592280000) + (SELECT COUNT(nick) as userCount FROM irclog WHERE nick LIKE "dataverse-user%" and timestamp > 1592280000) as userCount;
+# 82 is more realistic. After this query, duplicates were removed by hand to come up with 82:
+SELECT distinct nick FROM irclog WHERE timestamp > 1592280000 order by LOWER(nick);
