@@ -10,11 +10,11 @@ Here we document some details about the current chat service, which is Zulip.
 
 Our Zulip instance can be found at https://dataverse.zulipchat.com
 
-### Video: Intro to Zulip from the Dataverse perspective
+### Intro to Zulip video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HZr7TSLlQy8" title="Intro to Zulip video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+In January 2026, Philip Durbin talked about Zulip from the Dataverse perspective ([slides](https://docs.google.com/presentation/d/1Ur09MsRHOIGMvR4ub9bbPW0kiVOILxEwRzLscY5nKjs/edit?usp=sharing), [video](https://www.youtube.com/watch?v=HZr7TSLlQy8), [discuss](https://dataverse.zulipchat.com/#narrow/channel/375876-zulip/topic/CSCCE.20Tools.20Trial.20talk/with/569789576)). This was part of "tools trial" [webinar](https://www.cscce.org/2026/01/23/zulip-tools-trial-recap-find-out-more-about-this-open-source-community-platform/) hosted by CSCCE.
 
-https://www.youtube.com/watch?v=HZr7TSLlQy8
+[![Watch Intro to Zulip from the Dataverse perspective on YouTube](https://img.youtube.com/vi/HZr7TSLlQy8/hqdefault.jpg)](https://www.youtube.com/watch?v=HZr7TSLlQy8)
 
 ### How to create a Zulip channel
 
